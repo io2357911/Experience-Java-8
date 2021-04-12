@@ -1,7 +1,5 @@
 package academy.elqoo.java8.dateandtime;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.time.LocalDate;
 
 public class DateTime8 {
@@ -20,7 +18,7 @@ public class DateTime8 {
     }
 
     public static LocalDate findNextFriday13th(LocalDate from){
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
 }
