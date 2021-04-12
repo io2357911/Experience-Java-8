@@ -28,7 +28,7 @@ public class Stream8 {
     }
 
     public static List<String> mapToUpperCase(List<String> strings) {
-        throw new UnsupportedOperationException();
+        return strings.stream().map(String::toUpperCase).collect(Collectors.toList());
     }
 
     public static Integer sum(List<Integer> integers) {
