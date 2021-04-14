@@ -38,7 +38,7 @@ public class Stream8 {
     }
 
     public static List<Integer> skip(List<Integer> integers, Integer toSkip) {
-        throw new UnsupportedOperationException();
+        return integers.stream().skip(toSkip).collect(toList());
     }
 
     public static List<String> getFirstNames(List<String> names) {
