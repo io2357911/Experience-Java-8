@@ -1,19 +1,20 @@
 package academy.elqoo.java8.stream;
 
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 public class Stream8 {
 
     public static List<Integer> returnSquareRoot(List<Integer> numbers) {
         // return numbers.stream().map((v) -> (int)Math.sqrt(v)).collect(Collectors.toList());
-        return numbers.stream().map(Math::sqrt).map(Double::intValue).collect(Collectors.toList());
+        return numbers.stream().map(Math::sqrt).map(Double::intValue).collect(toList());
     }
 
     public static List<Integer> getAgeFromUsers(List<User> user) {
-        throw new UnsupportedOperationException();
+        return user.stream().map(User::getAge).collect(toList());
     }
 
     public static List<Integer> getDistinctAges(List<User> users) {
@@ -29,7 +30,7 @@ public class Stream8 {
     }
 
     public static List<String> mapToUpperCase(List<String> strings) {
-        return strings.stream().map(String::toUpperCase).collect(Collectors.toList());
+        return strings.stream().map(String::toUpperCase).collect(toList());
     }
 
     public static Integer sum(List<Integer> integers) {
