@@ -8,7 +8,8 @@ import java.util.stream.Stream;
 public class Stream8 {
 
     public static List<Integer> returnSquareRoot(List<Integer> numbers) {
-        throw new UnsupportedOperationException();
+        // return numbers.stream().map((v) -> (int)Math.sqrt(v)).collect(Collectors.toList());
+        return numbers.stream().map(Math::sqrt).map(Double::intValue).collect(Collectors.toList());
     }
 
     public static List<Integer> getAgeFromUsers(List<User> user) {
