@@ -18,7 +18,7 @@ public class Stream8 {
     }
 
     public static List<Integer> getDistinctAges(List<User> users) {
-        throw new UnsupportedOperationException();
+        return users.stream().map(User::getAge).distinct().collect(toList());
     }
 
     public static List<User> getLimitedUserList(List<User> users, int limit) {
