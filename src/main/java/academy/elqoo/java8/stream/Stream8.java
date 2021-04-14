@@ -26,7 +26,7 @@ public class Stream8 {
     }
 
     public static Integer countUsersOlderThen25(List<User> users) {
-        throw new UnsupportedOperationException();
+        return Long.valueOf(users.stream().filter(u -> u.getAge() > 25).count()).intValue();
     }
 
     public static List<String> mapToUpperCase(List<String> strings) {
