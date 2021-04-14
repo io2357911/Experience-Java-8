@@ -34,7 +34,7 @@ public class Stream8 {
     }
 
     public static Integer sum(List<Integer> integers) {
-        throw new UnsupportedOperationException();
+        return integers.stream().reduce(0, Integer::sum);
     }
 
     public static List<Integer> skip(List<Integer> integers, Integer toSkip) {
