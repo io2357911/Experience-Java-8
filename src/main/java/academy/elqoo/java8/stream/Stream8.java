@@ -42,7 +42,7 @@ public class Stream8 {
     }
 
     public static List<String> getFirstNames(List<String> names) {
-        throw new UnsupportedOperationException();
+        return names.stream().map(s -> s.split(" ")[0]).collect(toList());
     }
 
     public static List<String> getDistinctLetters(List<String> names) {
