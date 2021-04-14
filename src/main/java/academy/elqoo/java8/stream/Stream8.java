@@ -46,7 +46,11 @@ public class Stream8 {
     }
 
     public static List<String> getDistinctLetters(List<String> names) {
-        throw new UnsupportedOperationException();
+        return names.stream()
+                .map(s -> s.split(""))
+                .flatMap(Stream::of)
+                .distinct()
+                .collect(toList());
     }
 
 
