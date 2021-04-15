@@ -1,6 +1,7 @@
 package academy.elqoo.java8.stream;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -55,7 +56,7 @@ public class Stream8 {
 
 
     public static String separateNamesByComma(List<User> users) {
-        throw new UnsupportedOperationException();
+        return users.stream().map(User::getName).collect(Collectors.joining(", "));
     }
 
     public static double getAverageAge(List<User> users) {
