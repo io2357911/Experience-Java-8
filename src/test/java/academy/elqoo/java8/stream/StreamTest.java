@@ -112,7 +112,7 @@ public class StreamTest {
         User maggie = new User("Maggie",false);
         User lisa = new User("Lisa", false);
         List<User> input = asList(homer, bart, maggie, lisa);
-        Map<Boolean, List<User>> result = Stream8.partionUsersByGender(input);
+        Map<Boolean, List<User>> result = Stream8.partitionUsersByGender(input);
         assertThat(result.get(true), containsInAnyOrder(homer, bart));
         assertThat(result.get(false), containsInAnyOrder(maggie, lisa));
     }

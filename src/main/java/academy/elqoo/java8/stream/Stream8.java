@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.partitioningBy;
 import static java.util.stream.Collectors.toList;
 
 public class Stream8 {
@@ -80,8 +81,8 @@ public class Stream8 {
                 .orElse(0);
     }
 
-    public static Map<Boolean, List<User>> partionUsersByGender(List<User> users) {
-        throw new UnsupportedOperationException();
+    public static Map<Boolean, List<User>> partitionUsersByGender(List<User> users) {
+        return users.stream().collect(partitioningBy(User::isMale));
     }
 
     public static Map<Integer, List<User>> groupByAge(List<User> users) {
