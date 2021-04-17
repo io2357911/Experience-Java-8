@@ -113,7 +113,7 @@ public class Stream8 {
     }
 
     public static Stream<Integer> getBoxedStream(IntStream stream) {
-        throw new UnsupportedOperationException();
+        return stream.boxed();
     }
 
     public static List<Integer> generateFirst10PrimeNumbers() {
