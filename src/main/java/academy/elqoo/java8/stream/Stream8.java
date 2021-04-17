@@ -128,7 +128,7 @@ public class Stream8 {
     }
 
     public static List<Integer> generate10RandomNumbers() {
-        throw new UnsupportedOperationException();
+        return Stream.generate(() -> new Random().nextInt()).limit(10).collect(toList());
     }
 
     public static User findOldest(List<User> users) {
