@@ -105,7 +105,7 @@ public class Stream8 {
     }
 
     public static Optional<User> findAny(List<User> users, String name) {
-        throw new UnsupportedOperationException();
+        return users.stream().filter(u -> u.getName().equals(name)).findAny();
     }
 
     public static List<User> sortByAge(List<User> users) {
