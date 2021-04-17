@@ -129,7 +129,7 @@ public class Stream8 {
     }
 
     public static User findOldest(List<User> users) {
-        throw new UnsupportedOperationException();
+        return users.stream().max(Comparator.comparing(User::getAge)).get();
     }
 
     public static int sumAge(List<User> users) {
