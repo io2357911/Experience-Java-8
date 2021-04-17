@@ -109,7 +109,7 @@ public class Stream8 {
     }
 
     public static List<User> sortByAge(List<User> users) {
-        throw new UnsupportedOperationException();
+        return users.stream().sorted(Comparator.comparing(User::getAge)).collect(toList());
     }
 
     public static Stream<Integer> getBoxedStream(IntStream stream) {
