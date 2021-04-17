@@ -137,7 +137,7 @@ public class Stream8 {
     }
 
     public static IntSummaryStatistics ageSummaryStatistics(List<User> users) {
-        throw new UnsupportedOperationException();
+        return users.stream().mapToInt(User::getAge).summaryStatistics();
     }
 
 }
