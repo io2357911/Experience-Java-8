@@ -97,7 +97,7 @@ public class Stream8 {
     }
 
     public static boolean anyMatch(List<User> users, int age) {
-        throw new UnsupportedOperationException();
+        return users.stream().anyMatch(u -> u.getAge() == age);
     }
 
     public static boolean noneMatch(List<User> users, int age) {
